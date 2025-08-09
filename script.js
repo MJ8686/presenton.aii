@@ -3,45 +3,45 @@ const scroll = new LocomotiveScroll({
     smooth: true
 });
 
-// function startLoader() {
-//   let counterElement = document.querySelector(".counter");
-//   let currentValue = 0;
+function startLoader() {
+  let counterElement = document.querySelector(".counter");
+  let currentValue = 0;
 
-//   function updateCounter() {
-//     if (currentValue >= 100) {
-//       counterElement.textContent = "100";
-//       return;
-//     }
+  function updateCounter() {
+    if (currentValue >= 100) {
+      counterElement.textContent = "100";
+      return;
+    }
 
-//     currentValue += Math.floor(Math.random() * 20) + 1;
-//     if (currentValue > 100) {
-//       currentValue = 100;
-//     }
+    currentValue += Math.floor(Math.random() * 20) + 1;
+    if (currentValue > 100) {
+      currentValue = 100;
+    }
 
-//     counterElement.textContent = currentValue;
+    counterElement.textContent = currentValue;
 
-//     let delay = Math.floor(Math.random() * 100) + 500;
-//     setTimeout(updateCounter, delay);
-//   }
+    let delay = Math.floor(Math.random() * 100) + 500;
+    setTimeout(updateCounter, delay);
+  }
 
-//   updateCounter(); // <-- Call the function once to start the update
-// }
+  updateCounter(); // <-- Call the function once to start the update
+}
 
-// startLoader(); 
+startLoader(); 
 
 
-// gsap.to(".counter",0.25,{
-//    delay:3.5,
-//    opacity:0
-// });
-// gsap.to(".bar",{
-//   delay:3.5,
-//   height:0,
-//   stagger:{
-//     amount: 0.5,
-//   },
-//   ease: "power4.inOut"
-// });
+gsap.to(".counter",0.25,{
+   delay:3.5,
+   opacity:0
+});
+gsap.to(".bar",{
+  delay:3.5,
+  height:0,
+  stagger:{
+    amount: 0.5,
+  },
+  ease: "power4.inOut"
+});
 
 Shery.makeMagnet(".nav-but", {
   //Parameters are optional.
